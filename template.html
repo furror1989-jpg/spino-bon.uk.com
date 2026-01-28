@@ -1,1 +1,236 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>bgp.tools - 82.196.0.0/20</title><script src="https://cdn.tailwindcss.com"></script><script src="https://unpkg.com/lucide@latest"></script><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet"><style>body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #333; } .bg-maroon { background-color: #800000; } .border-maroon { border-color: #800000; } .tab-active { border: 1px solid #ccc; border-bottom: 1px solid white; margin-bottom: -1px; background: white; z-index: 10; } .tab-inactive { border: 1px solid transparent; background: #f3f4f6; color: #666; } .noise-bg { background-image: url('https://images.unsplash.com/photo-1550684848-fac1c5b4e853?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80'); background-size: cover; border: 2px solid #4a0000; } @media (max-width: 640px) { .mobile-hide { display: none; } }</style></head><body class="min-h-screen flex flex-col"><header class="bg-black text-white h-12 flex items-center px-4 justify-between sticky top-0 z-50"><div class="flex items-center space-x-2"><button id="mobile-menu-btn" class="sm:hidden mr-2"><i data-lucide="menu"></i></button><div class="flex items-center font-bold text-lg"><i data-lucide="cloud" class="mr-2 w-5 h-5"></i>bgp.tools</div></div><div class="flex-grow max-w-2xl mx-4 relative hidden sm:flex"><input type="text" placeholder="Start here..." class="w-full h-8 px-3 text-black text-sm outline-none rounded-l-sm"><button class="bg-maroon hover:bg-red-900 transition-colors px-3 h-8 rounded-r-sm flex items-center justify-center"><i data-lucide="arrow-right" class="w-4 h-4 text-white"></i></button></div><div class="flex items-center"><button class="bg-maroon hover:bg-red-900 transition-colors px-6 h-full flex items-center text-sm font-semibold absolute right-0 top-0 bottom-0">Login</button></div></header><div id="mobile-menu" class="hidden bg-zinc-900 text-white p-4 sm:hidden"><div class="flex flex-col space-y-4"><input type="text" placeholder="Search..." class="p-2 text-black rounded-sm"><a href="#" class="py-2 border-b border-zinc-800">Connectivity</a><a href="#" class="py-2 border-b border-zinc-800">Whois</a><a href="#" class="py-2 border-b border-zinc-800">DNS</a></div></div><main class="max-w-5xl mx-auto w-full p-4 sm:p-8 flex-grow"><div class="flex items-center justify-between mb-4 border-b border-gray-300"><div class="flex space-x-1"><button class="px-4 py-1 text-sm font-medium border border-gray-300 border-bottom-0 bg-white translate-y-[1px]">View</button><button class="px-4 py-1 text-sm font-medium bg-gray-100 border border-transparent hover:bg-gray-200 transition-colors">Super LG</button></div><div class="text-emerald-600"><i data-lucide="monitor" class="w-5 h-5"></i></div></div><div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12"><div class="md:col-span-2"><h1 class="text-4xl sm:text-5xl font-black tracking-tight mb-6">82.196.0.0/20</h1><div class="space-y-1 text-sm"><p>Originated by <a href="#" class="text-maroon hover:underline font-bold">AS14061</a></p><p>AS Name: <span class="font-bold">DigitalOcean LLC</span></p></div></div><div class="flex justify-center md:justify-end"><div class="w-48 h-48 noise-bg shadow-lg transform hover:scale-105 transition-transform duration-500 cursor-pointer"></div></div></div><div class="mt-16"><div class="flex flex-wrap border-b border-gray-300"><button class="px-4 py-2 text-sm font-bold border border-gray-300 border-b-white bg-white -mb-[1px]">Overview</button><button class="px-4 py-2 text-sm font-medium bg-gray-100 border border-transparent hover:bg-gray-200">Connectivity</button><button class="px-4 py-2 text-sm font-medium bg-gray-100 border border-transparent hover:bg-gray-200">Whois</button><button class="px-4 py-2 text-sm font-medium bg-gray-100 border border-transparent hover:bg-gray-200">DNS</button><button class="px-4 py-2 text-sm font-medium bg-gray-100 border border-transparent hover:bg-gray-200">Validation</button></div><div class="grid grid-cols-1 sm:grid-cols-2 gap-y-8 gap-x-12 py-8"><div class="space-y-1"><p class="text-xs text-gray-500 uppercase font-bold">Registered on</p><p class="text-sm font-bold">8 Mar 2013 (12 years old)</p></div><div class="space-y-1"><p class="text-xs text-gray-500 uppercase font-bold">Registered to</p><p class="text-sm"><a href="#" class="text-maroon hover:underline font-bold">us.digitalocea...</a> (ripe)</p><p class="text-xs"><a href="#" class="text-maroon hover:underline">[Transfer History]</a></p></div><div class="space-y-1"><p class="text-xs text-gray-500 uppercase font-bold">Prefix status</p><p class="text-sm font-bold">Active, Allocated under RIPE</p></div><div class="space-y-1"><p class="text-xs text-gray-500 uppercase font-bold">Size of prefix</p><p class="text-sm font-bold">16 /24's</p></div></div></div></main><div id="cookie-banner" class="fixed bottom-4 right-4 bg-white border border-gray-300 shadow-2xl p-4 max-w-xs rounded-lg z-50 flex flex-col space-y-3"><p class="text-xs text-gray-600">We use cookies to ensure you get the best experience on our website.</p><div class="flex space-x-2"><button onclick="document.getElementById('cookie-banner').style.display='none'" class="bg-maroon text-white text-xs px-3 py-1.5 rounded font-bold hover:bg-red-900">Accept</button><button onclick="document.getElementById('cookie-banner').style.display='none'" class="text-gray-500 text-xs px-3 py-1.5 hover:underline">Close</button></div></div><script>lucide.createIcons(); const mobileBtn = document.getElementById('mobile-menu-btn'); const mobileMenu = document.getElementById('mobile-menu'); mobileBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); }); document.querySelectorAll('button').forEach(btn => { btn.addEventListener('click', (e) => { if(!btn.onclick && !btn.id.includes('menu')) { console.log('Action: ' + btn.innerText); } }); });</script></body></html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinobon Casino - Licensed Gaming Platform</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f0507;
+        }
+        .logo-skew {
+            transform: skewX(-10deg);
+        }
+        /* Кастомный скроллбар */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f0507;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2a050c;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3d0812;
+        }
+    </style>
+</head>
+<body class="text-white">
+
+    <!-- Шапка (Header) -->
+    <header class="bg-[#2a050c] border-b border-white/5 py-3 px-4 md:px-12 flex items-center justify-between sticky top-0 z-50">
+        <div class="flex items-center gap-8">
+            <div class="flex items-center gap-2 group cursor-pointer">
+                <div class="w-10 h-10 bg-[#ffe600] rounded-lg flex items-center justify-center font-black text-black text-xl italic logo-skew group-hover:scale-110 transition-transform">S</div>
+                <div class="flex flex-col leading-none">
+                    <span class="text-[#ffe600] font-black text-xl tracking-tighter italic">SPINO</span>
+                    <span class="text-[#ffe600] font-black text-xl tracking-tighter italic">BON</span>
+                </div>
+            </div>
+            
+            <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-gray-300">
+                <a href="#" class="hover:text-white transition-colors">Login & Registration</a>
+                <a href="#" class="hover:text-white transition-colors">Application</a>
+                <a href="#" class="hover:text-white transition-colors">Bonuses</a>
+            </nav>
+        </div>
+
+        <div class="flex items-center gap-4">
+            <button class="hidden md:block px-6 py-2 bg-white/10 hover:bg-white/20 rounded-full text-sm font-bold transition-all">Login</button>
+            <button class="px-6 py-2 bg-[#ffe600] hover:bg-[#d9c400] text-black rounded-full text-sm font-bold transition-all shadow-[0_0_15px_rgba(255,230,0,0.3)]">Sign up</button>
+            <button class="p-2 text-gray-400 hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-12 space-y-20">
+        
+        <!-- Секция Live Casino -->
+        <section>
+            <div class="flex items-center justify-center mb-10">
+                <h2 class="text-3xl font-bold capitalize">Live casino</h2>
+            </div>
+
+            <div id="games-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <!-- Карточки будут вставлены через JS или можно оставить статику -->
+                <script>
+                    const games = [
+                        { title: 'Auto Roulette', provider: 'PLATI+', color: 'from-blue-600', img: 'https://images.unsplash.com/photo-1596838132731-dd9427409223?w=300' },
+                        { title: 'Blackjack 7', provider: 'LUCKY STREAK', color: 'from-purple-600', img: 'https://images.unsplash.com/photo-1511193311914-0346f16efe90?w=300' },
+                        { title: 'Las Vegas Roulette', provider: 'ALG', color: 'from-orange-600', img: 'https://images.unsplash.com/photo-1606167668584-78701c57f13d?w=300' },
+                        { title: 'French Roulette', provider: 'ICONIC21', color: 'from-teal-600', img: 'https://images.unsplash.com/photo-1596838132731-dd9427409223?w=300' },
+                        { title: 'Roulette Euro', provider: 'PLATI+', color: 'from-red-600', img: 'https://images.unsplash.com/photo-1511193311914-0346f16efe90?w=300' },
+                        { title: 'Roulette AUTO', provider: 'LUCKY STREAK', color: 'from-indigo-600', img: 'https://images.unsplash.com/photo-1606167668584-78701c57f13d?w=300' }
+                    ];
+
+                    document.write(games.map(game => `
+                        <div class="relative group rounded-2xl overflow-hidden aspect-[3/4] cursor-pointer bg-[#1a080c] transition-transform hover:-translate-y-2 shadow-lg">
+                            <div class="absolute top-2 left-2 flex gap-1 z-10">
+                                <div class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center shadow-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="white"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 3.5 2.5 6 .5 2.5-1 4.5-3.5 4.5Z"/><path d="M12 22c5.523 0 10-4.477 10-10 0-1.29-.244-2.522-.687-3.654A11.012 11.012 0 0 1 12 13a11.012 11.012 0 0 1-9.313-4.654A9.957 9.957 0 0 0 2 12c0 5.523 4.477 10 10 10Z"/></svg>
+                                </div>
+                                <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center shadow-md text-[10px] font-bold">$</div>
+                            </div>
+                            <img src="${game.img}" alt="${game.title}" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity">
+                            <div class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t ${game.color} to-transparent pt-12">
+                                <p class="text-[9px] font-bold text-gray-200 uppercase mb-0.5">${game.provider}</p>
+                                <h3 class="text-sm font-bold leading-tight">${game.title}</h3>
+                                <div class="mt-2 bg-red-600 text-[9px] font-black inline-block px-2 py-0.5 rounded italic shadow-sm uppercase">
+                                    ${game.provider} LIVE
+                                </div>
+                            </div>
+                        </div>
+                    `).join(''));
+                </script>
+            </div>
+            
+            <div class="flex justify-center mt-10">
+                <button class="bg-[#ffe600] text-black px-10 py-3 rounded-full font-black text-sm hover:scale-105 transition-transform shadow-[0_4px_20px_rgba(255,230,0,0.2)]">
+                    PLAY LIVE CASINO
+                </button>
+            </div>
+        </section>
+
+        <!-- Секция Promotions -->
+        <section>
+            <div class="flex items-center justify-between mb-8">
+                <h2 class="text-2xl font-bold">Promotions</h2>
+                <button class="text-xs text-gray-400 border border-white/10 px-4 py-1.5 rounded-full hover:bg-white/5 transition-colors">Show all</button>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Promo 1 -->
+                <div class="bg-[#1f0a0f] rounded-[2rem] p-6 flex flex-col sm:flex-row gap-6 items-center border border-white/5 hover:border-white/10 transition-all">
+                    <div class="w-full sm:w-44 h-44 flex-shrink-0 bg-gradient-to-br from-purple-800 to-indigo-900 rounded-2xl flex items-center justify-center relative overflow-hidden shadow-inner">
+                        <div class="absolute top-2 left-2 bg-black/60 text-[9px] px-2 py-1 rounded-full flex items-center gap-1 backdrop-blur-sm">
+                            <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
+                            Open: Dec 15, 2025 - Jan 30, 2026
+                        </div>
+                        <span class="text-6xl drop-shadow-2xl">🎁</span>
+                    </div>
+                    <div class="text-center sm:text-left flex-1">
+                        <span class="text-[10px] text-gray-500 uppercase tracking-widest font-bold">Event</span>
+                        <h3 class="text-2xl font-black mb-1 mt-1">Bonus Shop</h3>
+                        <p class="text-sm text-gray-400 mb-5 leading-relaxed">
+                            Use coins to buy<br>
+                            <span class="text-red-500 font-black text-lg">110 EUR + 2 350 Free Spins</span>
+                        </p>
+                        <div class="flex flex-wrap gap-2 justify-center sm:justify-start">
+                            <button class="bg-white/10 px-5 py-2.5 rounded-xl text-xs font-bold hover:bg-white/20 transition-all">Go to Bonus Shop</button>
+                            <button class="bg-[#ffe600] text-black px-5 py-2.5 rounded-xl text-xs font-bold hover:scale-105 transition-all">Sign up</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Promo 2 -->
+                <div class="bg-[#1f0a0f] rounded-[2rem] p-6 flex flex-col sm:flex-row gap-6 items-center border border-white/5 hover:border-white/10 transition-all">
+                    <div class="w-full sm:w-44 h-44 flex-shrink-0 bg-gradient-to-br from-pink-800 to-red-900 rounded-2xl flex items-center justify-center relative overflow-hidden shadow-inner">
+                        <div class="text-5xl italic font-black text-white/10 absolute -right-2 -bottom-2 select-none">SPIN</div>
+                        <span class="text-6xl drop-shadow-2xl">🏆</span>
+                    </div>
+                    <div class="text-center sm:text-left flex-1">
+                        <span class="text-[10px] text-gray-500 uppercase tracking-widest font-bold">Tournament</span>
+                        <h3 class="text-2xl font-black mb-1 mt-1">Spin Arena</h3>
+                        <p class="text-sm text-gray-400 mb-5 leading-relaxed">
+                            Prize Pool<br>
+                            <span class="text-red-500 font-black text-lg">250 EUR real money</span>
+                        </p>
+                        <div class="flex flex-wrap gap-2 justify-center sm:justify-start">
+                            <button class="bg-white/10 px-5 py-2.5 rounded-xl text-xs font-bold hover:bg-white/20 transition-all">Check it out</button>
+                            <button class="bg-[#ffe600] text-black px-5 py-2.5 rounded-xl text-xs font-bold hover:scale-105 transition-all">Participate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция Информации и SEO -->
+        <section class="max-w-4xl mx-auto space-y-16 py-12 border-t border-white/5">
+            <div>
+                <h2 class="text-3xl font-black mb-8 text-center sm:text-left">Create Your Account in Three Simple Steps</h2>
+                <p class="text-gray-400 text-base leading-relaxed mb-10 text-center sm:text-left">
+                    Creating your Spinobon Casino account requires only basic information and takes less than five minutes to complete. Follow these straightforward steps:
+                </p>
+                
+                <div class="grid gap-4">
+                    <script>
+                        const steps = [
+                            "Visit the official Spinobon Casino website and click the registration button",
+                            "Enter your email address and create a strong password for Spinobon Casino login access",
+                            "Select United Kingdom as your country and GBP as your preferred currency",
+                            "Provide personal details including first name, last name, phone number, and date of birth",
+                            "Add your address information including region, city, street address, and postal code",
+                            "Accept our Terms and Conditions and Privacy Policy",
+                            "Optionally subscribe to receive notifications about personal offers and exclusive promotions"
+                        ];
+                        document.write(steps.map((step, i) => `
+                            <div class="flex gap-5 items-start bg-white/5 p-4 rounded-2xl border border-transparent hover:border-white/10 transition-all group">
+                                <div class="w-10 h-10 rounded-full bg-[#ffe600] text-black font-black flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform">
+                                    ${i + 1}
+                                </div>
+                                <p class="text-sm text-gray-200 py-2.5 leading-snug">${step}</p>
+                            </div>
+                        `).join(''));
+                    </script>
+                </div>
+            </div>
+
+            <div class="bg-[#1a080c] p-8 rounded-[2.5rem] border border-white/5">
+                <h2 class="text-2xl font-black mb-6">Spinobon Casino - Licensed Gaming Platform for United Kingdom Players</h2>
+                <div class="space-y-4 text-gray-400 text-sm leading-relaxed">
+                    <p>
+                        At our casino, UK players enjoy access to a huge selection of casino games spanning multiple categories, including slots, table games, live dealer options, crash games, progressive jackpots, and poker.
+                    </p>
+                    <p>
+                        Whether you prefer spinning the reels on video slots, testing your strategy at card games like poker, or experiencing the thrill of live dealer tables, we offer something for every taste and skill level. Our platform processes all transactions in GBP, eliminating currency conversion fees and simplifying your gaming experience.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Мобильный футер (Sticky Navigation) -->
+    <nav class="lg:hidden fixed bottom-0 inset-x-0 bg-[#2a050c]/95 backdrop-blur-md border-t border-white/10 py-3 px-6 flex justify-between items-center z-[100]">
+        <div class="flex flex-col items-center gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <span class="text-[9px] text-gray-400 font-bold uppercase tracking-tighter">Home</span>
+        </div>
+        <div class="flex flex-col items-center gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+            <span class="text-[9px] text-gray-400 font-bold uppercase tracking-tighter">Games</span>
+        </div>
+        <div class="relative">
+            <div class="w-14 h-14 bg-[#ffe600] rounded-full flex items-center justify-center -mt-10 border-[6px] border-[#0f0507] shadow-xl active:scale-95 transition-transform">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </div>
+        </div>
+        <div class="flex flex-col items-center gap-1 text-[#ffe600]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+            <span class="text-[9px] font-bold uppercase tracking-tighter">Promo</span>
+        </div>
+        <div class="flex flex-col items-center gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span class="text-[9px] text-gray-400 font-bold uppercase tracking-tighter">Profile</span>
+        </div>
+    </nav>
+
+</body>
+</html>
